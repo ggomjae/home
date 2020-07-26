@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Init from './view/init'
 
 class App extends React.Component {
 
@@ -11,7 +11,7 @@ class App extends React.Component {
       };
   }
 
-  componentDidMount() {
+  componentDidMount(){
       fetch('api')
           .then(res=>res.json())
           .then(data=>this.setState({username:data.user_id}));
@@ -23,10 +23,10 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
             {username ? `Hello ${username}` : 'Hello World'}
+            <Init></Init>
           </header>
         </div>
     );
-    ;
   }
 }
 

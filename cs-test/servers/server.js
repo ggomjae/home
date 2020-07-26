@@ -3,8 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3001;
 const route = require('./routes/index');
-//const mdbConn = require('./mariaDBConn.js')
-
 
 app.use(bodyParser.json());
 app.use('/api', route); 
