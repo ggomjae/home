@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-             username:null
+             username:null,
+             subject : {title:'web',sub:'gomjae'}
       };
   }
 
@@ -19,11 +20,12 @@ class App extends React.Component {
 
   render() {
     const {username} = this.state;
+
     return (
         <div className="App">
           <header className="App-header">
             {username ? `Hello ${username}` : 'Hello World'}
-            <Init></Init>
+            <Init title = {this.state.subject.sub}></Init>
           </header>
         </div>
     );
