@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import First from '../components/first'
+import PostList from '../components/PostList'
 
 class init extends Component{
+    
     render(){
+        console.log("2")
         return (
             <div>
-                {this.props.title}
-                <First></First>
+                <PostList></PostList>
             </div>
         );
     } 

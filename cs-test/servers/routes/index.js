@@ -2,12 +2,11 @@ const express = require('express');
 const mdbConn = require('../mariaDBConn.js')
 const router = express.Router();
 
-router.get('/', (req, res)=>
+router.get('/list', (req, res)=>
 
     mdbConn.getUserList()
         .then((rows) => {
             res.json(rows)
-            console.log(rows);
     }).catch((errMsg) => {
         console.log(errMsg);
     }) 

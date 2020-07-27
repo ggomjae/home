@@ -12,20 +12,13 @@ class App extends React.Component {
       };
   }
 
-  componentDidMount(){
-      fetch('api')
-          .then(res=>res.json())
-          .then(data=>this.setState({username:data.user_id}));
-  }
-
   render() {
-    const {username} = this.state;
+    console.log("3")
 
     return (
         <div className="App">
           <header className="App-header">
-            {username ? `Hello ${username}` : 'Hello World'}
-            <Init title = {this.state.subject.sub}></Init>
+            <Init></Init>
           </header>
         </div>
     );

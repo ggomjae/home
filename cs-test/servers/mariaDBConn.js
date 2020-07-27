@@ -19,7 +19,8 @@ async function GetUserList(){
     }
     finally{
         if (conn) conn.end();
-        return rows[0];
+        
+        return rows;
     }
 }
  
