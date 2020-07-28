@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React from 'react'
+import history from '../history';
 
-class PostList extends Component{
+class PostList extends React.Component{
 
     constructor(props) {
         super(props);
@@ -21,17 +22,31 @@ class PostList extends Component{
         return body
     }
 
+    handleFormSubmit(e) {
+        e.preventDefault()
+        this.createPost()
+            .then((response) => {    
+                console.log(response.data);
+        })
+     //   this.props.stateRefesh();
+    }
+
+    movePath(param){
+        alert(param)
+        history.push('/join')
+        window.location.reload(); 
+    }
+
     render(){
 
         const {username} = this.state;
-        console.log(username[0])
-        console.log(username[1])
         
         return (
             <div>
                 <div>
-                    {username.map(v => <p>{v.user_id}</p>)}
-                    {username.map(v => <p>{v.user_key}</p>)}
+                    {username.map(v => <p>{v.user_id} {v.user_key} 
+                        <button onClick={() => this.movePath(v.user_key)}>{"move"}</button>
+                    </p>)}
                 </div>
             </div>
         );
