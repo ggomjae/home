@@ -1,21 +1,27 @@
-TodoList [intern proejct]
+TodoList [intern proejct] 
 ==================== 
-React + node(express) + docker(mariadb)
--------------------- 
-2020.07.27 ~ ING <br>
+
+## Full Architecture
+
+```React + node(express) + docker(mariadb)```
+
+<div><img src="https://user-images.githubusercontent.com/43604493/88942279-06a3a680-d2c5-11ea-8af1-226ccc445a87.JPG" align="left" width="100%"></div>
 
 ## FrontEnd Architecture
 
-<div><img src="https://user-images.githubusercontent.com/43604493/88937685-6eef8980-d2bf-11ea-9529-968ea44917e1.JPG" align="left" width="100%"></div>
+```각 View에 알맞은 Component를 import하여 조합. ```
 
-각 View에 알맞은 Component를 import하여 조합. 
+<div><img src="https://user-images.githubusercontent.com/43604493/88937685-6eef8980-d2bf-11ea-9529-968ea44917e1.JPG" align="left" width="100%"></div>
 
 
 ## BackEnd Architecture
 
+```Flow```
+
 <div><img src="https://user-images.githubusercontent.com/43604493/88937688-7020b680-d2bf-11ea-8ade-f7b4b57f1688.JPG" align="left" width="100%"></div>
 
-REST API Sever 구현
+
+```REST API Sever 구현```
 
 ```kt
 //project/todo/servers/routes/index.js
